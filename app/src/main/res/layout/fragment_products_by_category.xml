@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/_30sdp"
+    >
+
+    <EditText
+        android:id="@+id/ed_search"
+        style="@style/textPatternRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_button_gray_meduim_raduis"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:padding="@dimen/_7sdp"
+        android:singleLine="true"
+        android:textSize="@dimen/_11ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textPatternRegular"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/ed_search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/all_products"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swip_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv">
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/rv_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_demo_angle="20"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            app:shimmer_demo_child_count="8"
+            app:shimmer_demo_layout_manager_type="linear_vertical"
+            app:shimmer_demo_view_holder_item_background="@color/white" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/app"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/white"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

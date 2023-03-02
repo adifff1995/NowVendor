@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_raduis_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_16sdp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/ic_line_gray" />
+
+    <TextView
+        style="@style/textPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/new_order"
+        android:textColor="@color/app"
+        android:textSize="@dimen/_11ssp" />
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:indeterminate="true" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardPreventCornerOverlap="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_num"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kl2O1Jn"
+                android:textColor="@color/app"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@id/tv"
+                app:layout_constraintTop_toTopOf="@id/tv" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="الكابتن عز الدين"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv"
+                app:layout_constraintTop_toBottomOf="@id/tv" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="0059711223344"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv"
+                app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:drawableStart="@drawable/ic_icon_material_location_on"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="شارع الجزائر مبنى الكتيبة 154"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+
+            <TextView
+                android:id="@+id/tv_store_name"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:drawableStart="@drawable/ic_iconly_light_home"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv"
+                app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:drawableStart="@drawable/ic_pickup"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="Sep 15, 2022"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv"
+                app:layout_constraintTop_toBottomOf="@id/tv_store_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_date">
+
+                <Button
+                    android:id="@+id/btn_accept"
+                    style="@style/textPatternRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_shape_green"
+                    android:text="@string/accept"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+
+                <Button
+                    android:id="@+id/btn_reject"
+                    style="@style/textPatternRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_shape_red"
+                    android:text="@string/reject"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

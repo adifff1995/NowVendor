@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_raduis_white"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/_16sdp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/ic_line_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp">
+
+        <TextView
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/choose_action"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:background="#D8D8D8" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <Button
+            android:id="@+id/btn_edit"
+            style="@style/textPattern"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_main_shape"
+            android:text="@string/edit"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_republish"
+            style="@style/textPattern"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_11ssp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:text="@string/republish"
+            android:textColor="@color/text" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activities.AddProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tool"
+            layout="@layout/app_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_image"
+                android:textSize="@dimen/_10ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp">
+
+                <FrameLayout
+                    android:id="@+id/frame_pick_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_dashed_border_gray"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/textPattern"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:drawableTop="@drawable/ic_photo_camera"
+                        android:drawablePadding="@dimen/_7sdp"
+                        android:text="@string/attach_picture"
+                        android:textColor="#364041"
+                        android:textSize="@dimen/_10ssp" />
+                </FrameLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/temp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_name"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/service_name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+        <EditText
+            android:id="@+id/ed_desc"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/description"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+
+        <TextView
+            android:id="@+id/ed_durations"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/service_duration"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+        <EditText
+            android:id="@+id/ed_price"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/price"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+
+        <TextView
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/additions"
+            android:textSize="@dimen/_11ssp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_additions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/tv_add_more_additions"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_add_circle"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="@string/other_additions"
+            android:textColor="@color/app" />
+
+        <Button
+            android:id="@+id/btn_add"
+            style="@style/textPattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_button_main_shape"
+            android:text="@string/publish"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/card_delivery" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

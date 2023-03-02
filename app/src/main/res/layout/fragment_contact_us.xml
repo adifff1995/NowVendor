@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_name"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:padding="@dimen/_7sdp"
+            android:textSize="@dimen/_10ssp" />
+
+        <EditText
+            android:id="@+id/ed_mobile"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:padding="@dimen/_7sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <EditText
+            android:id="@+id/ed_email"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_7sdp"
+            android:textSize="@dimen/_10ssp" />
+
+        <EditText
+            android:id="@+id/ed_msg"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/msg"
+            android:lines="6"
+            android:padding="@dimen/_7sdp"
+            android:textSize="@dimen/_10ssp" />
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/textPattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/bg_button_main_shape"
+            android:text="@string/send"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</ScrollView>

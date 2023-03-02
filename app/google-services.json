@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "20845806492",
+    "project_id": "storeapp-bb226",
+    "storage_bucket": "storeapp-bb226.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20845806492:android:ac1e801ccd0a76657dbe59",
+        "android_client_info": {
+          "package_name": "com.app.nowVendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6AzmT55oCREi91bv0sj5g--saw-r_b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "20845806492-3eh99d5tnueed3cpuq6ac11ag7kj1j6p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.radarvendor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20845806492:android:6a04e8f5906c75f37dbe59",
+        "android_client_info": {
+          "package_name": "com.app.radar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6AzmT55oCREi91bv0sj5g--saw-r_b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "20845806492-3eh99d5tnueed3cpuq6ac11ag7kj1j6p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.radarvendor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20845806492:android:31a3f59c9bdbe9db7dbe59",
+        "android_client_info": {
+          "package_name": "com.app.radarvendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6AzmT55oCREi91bv0sj5g--saw-r_b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20845806492-9qgp8guditnoka0l6l32c58f2d9a76dh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "20845806492-3eh99d5tnueed3cpuq6ac11ag7kj1j6p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.radarvendor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

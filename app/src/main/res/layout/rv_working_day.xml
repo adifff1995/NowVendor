@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/tv_day"
+        style="@style/textPatternRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="السبت" />
+
+
+    <TextView
+        android:id="@+id/ed_time_from"
+        style="@style/textPatternRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_gray_meduim_raduis"
+        android:drawableEnd="@drawable/arrow_power_spinner_library"
+        android:drawableTint="@color/text"
+        android:text="@string/from_time"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/gray_line"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/ed_time_to"
+        style="@style/textPatternRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_gray_meduim_raduis"
+        android:drawableEnd="@drawable/arrow_power_spinner_library"
+        android:drawableTint="@color/text"
+        android:text="@string/to_time"
+        android:textColor="@color/gray_line"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

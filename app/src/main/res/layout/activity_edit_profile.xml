@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.EditProfileActivity">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/app_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/tool">
+
+            <LinearLayout
+                android:id="@+id/linear_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/_3sdp"
+                        android:src="@mipmap/ic_launcher"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_overlay="true"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_3sdp"
+                        android:src="@drawable/ic_edit_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.42"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/ed_name"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:gravity="start"
+                    android:inputType="text"
+                    android:padding="@dimen/_7sdp"
+                    android:text="صالون عز"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/ed_email"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:gravity="start"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/_7sdp"
+                    android:text="ezz@gmail.com"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/ed_mobile"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:gravity="start"
+                    android:inputType="phone"
+                    android:padding="@dimen/_7sdp"
+                    android:text="2599123456"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <EditText
+                        android:id="@+id/ed_password"
+                        style="@style/textPatternRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_bordered_gray"
+                        android:gravity="start"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_7sdp"
+                        android:text="ezz@gmail.com"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_change_password"
+                        style="@style/textPatternRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/change"
+                        android:textColor="@color/app"
+                        android:textSize="@dimen/_11ssp" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/ed_location"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:drawableEnd="@drawable/ic_icon_material_location_on"
+                    android:gravity="start"
+                    android:padding="@dimen/_7sdp"
+                    android:text="غزة فلسطين"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/service_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:fontFamily="@font/almarai"
+                    android:gravity="center_vertical"
+                    android:hint="@string/service_type"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_10ssp"
+                    app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+                    app:spinner_arrow_gravity="start"
+                    app:spinner_arrow_padding="10dp"
+                    app:spinner_arrow_show="true"
+                    app:spinner_arrow_tint="#C0C0C0"
+                    app:spinner_divider_color="#D8D6D6"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="#fff" />
+
+                <EditText
+                    android:id="@+id/ed_service_desc"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:gravity="start"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/_7sdp"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp"
+                    tools:text="ezz@gmail.com" />
+
+                <RelativeLayout
+                    android:id="@+id/rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <EditText
+                        android:id="@+id/ed_raduis"
+                        style="@style/textPatternRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_bordered_gray"
+                        android:gravity="start"
+                        android:hint="@string/raduis_vendor"
+                        android:inputType="number"
+                        android:padding="@dimen/_7sdp"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        style="@style/textPatternRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:text="@string/km" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/ed_tags"
+                    style="@style/textPatternRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:gravity="start"
+                    android:padding="@dimen/_7sdp"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_11ssp"
+                    android:hint="@string/tags" />
+
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/working_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_button_bordered_gray"
+                    android:fontFamily="@font/almarai"
+                    android:gravity="center_vertical"
+                    android:hint="@string/working_days"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_10ssp"
+                    app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+                    app:spinner_arrow_gravity="start"
+                    app:spinner_arrow_padding="10dp"
+                    app:spinner_arrow_show="true"
+                    app:spinner_arrow_tint="#C0C0C0"
+                    app:spinner_divider_color="#D8D6D6"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="#fff" />
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_10sdp">-->
+
+                <!--                    <com.skydoves.powerspinner.PowerSpinnerView-->
+                <!--                        android:id="@+id/from_time"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center_vertical"-->
+                <!--                        android:layout_marginEnd="@dimen/_5sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/bg_button_bordered_gray"-->
+                <!--                        android:fontFamily="@font/almarai"-->
+                <!--                        android:gravity="center_vertical"-->
+                <!--                        android:hint="@string/from_time"-->
+                <!--                        android:padding="@dimen/_5sdp"-->
+                <!--                        android:textColor="@color/text"-->
+                <!--                        android:textSize="@dimen/_10ssp"-->
+                <!--                        app:spinner_arrow_drawable="@drawable/ic_chevron_down"-->
+                <!--                        app:spinner_arrow_gravity="start"-->
+                <!--                        app:spinner_arrow_padding="10dp"-->
+                <!--                        app:spinner_arrow_show="true"-->
+                <!--                        app:spinner_arrow_tint="#C0C0C0"-->
+                <!--                        app:spinner_divider_color="#D8D6D6"-->
+                <!--                        app:spinner_divider_show="true"-->
+                <!--                        app:spinner_divider_size="0.4dp"-->
+                <!--                        app:spinner_popup_animation="dropdown"-->
+                <!--                        app:spinner_popup_background="#fff" />-->
+
+                <!--                    <com.skydoves.powerspinner.PowerSpinnerView-->
+                <!--                        android:id="@+id/to_time"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center_vertical"-->
+                <!--                        android:layout_marginStart="@dimen/_5sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/bg_button_bordered_gray"-->
+                <!--                        android:fontFamily="@font/almarai"-->
+                <!--                        android:gravity="center_vertical"-->
+                <!--                        android:hint="@string/to_time"-->
+                <!--                        android:padding="@dimen/_5sdp"-->
+                <!--                        android:textColor="@color/text"-->
+                <!--                        android:textSize="@dimen/_11ssp"-->
+                <!--                        app:spinner_arrow_drawable="@drawable/ic_chevron_down"-->
+                <!--                        app:spinner_arrow_gravity="start"-->
+                <!--                        app:spinner_arrow_padding="10dp"-->
+                <!--                        app:spinner_arrow_show="true"-->
+                <!--                        app:spinner_arrow_tint="#C0C0C0"-->
+                <!--                        app:spinner_divider_color="#D8D6D6"-->
+                <!--                        app:spinner_divider_show="true"-->
+                <!--                        app:spinner_divider_size="0.4dp"-->
+                <!--                        app:spinner_popup_animation="dropdown"-->
+                <!--                        app:spinner_popup_background="#fff" />-->
+                <!--                </LinearLayout>-->
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    style="@style/textPattern"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/bg_button_main_shape"
+                    android:text="@string/edit"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/password_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/tv"
+                    style="@style/textPattern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="@string/resert_pass"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="@style/textPattern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:text="@string/reset_txt1"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv" />
+
+                <FrameLayout
+                    android:id="@+id/fram1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/tv2">
+
+                    <EditText
+                        android:id="@+id/ed_old_pass"
+                        style="@style/textPatternRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_secondry_shape"
+                        android:gravity="start"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/show_pass1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:elevation="@dimen/_3sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_baseline_remove_red_eye_24" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fram2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/fram1">
+
+                    <EditText
+                        android:id="@+id/ed_new_pass"
+                        style="@style/textPatternRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_secondry_shape"
+                        android:gravity="start"
+                        android:hint="@string/new_pass"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/show_pass2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:elevation="@dimen/_3sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_baseline_remove_red_eye_24" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fram3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/fram2">
+
+                    <EditText
+                        android:id="@+id/ed_confirm_new_pass"
+                        style="@style/textPatternRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_secondry_shape"
+                        android:gravity="start"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/show_pass3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:elevation="@dimen/_3sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_baseline_remove_red_eye_24" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btn_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/bg_button_main_shape"
+                    android:fontFamily="@font/almarai"
+                    android:text="@string/reset"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.7" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".Fragment.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <Button
+                android:id="@+id/btn_state"
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_button_shape_green"
+                android:text="@string/status"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/textPatternRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/status" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis">
+
+            <Button
+                android:id="@+id/btn_new_orders"
+                style="@style/textPatternRegular"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_main_shape"
+                android:text="@string/new_orders"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <Button
+                android:id="@+id/btn_previous_orders"
+                style="@style/textPatternRegular"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_transparent"
+                android:text="@string/previous_orders"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indeterminateAnimationType="disjoint" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_to_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                        android:id="@+id/rv_current_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:shimmer_demo_angle="20"
+                        app:shimmer_demo_child_count="8"
+                        app:shimmer_demo_layout_manager_type="linear_vertical"
+                        app:shimmer_demo_view_holder_item_background="@color/white" />
+
+                    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                        android:id="@+id/rv_previous_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_16sdp"
+                        android:visibility="gone"
+                        app:shimmer_demo_angle="20"
+                        app:shimmer_demo_child_count="8"
+                        app:shimmer_demo_layout_manager_type="linear_vertical"
+                        app:shimmer_demo_view_holder_item_background="@color/white" />
+
+                </LinearLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activities.AddProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_16sdp">
+
+        <include
+            android:id="@+id/tool"
+            layout="@layout/app_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_image"
+                android:textSize="@dimen/_10ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:paddingVertical="@dimen/_3sdp">
+
+                <FrameLayout
+                    android:id="@+id/frame_pick_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_dashed_border_gray"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/textPattern"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:drawableTop="@drawable/ic_photo_camera"
+                        android:drawablePadding="@dimen/_7sdp"
+                        android:text="@string/attach_picture"
+                        android:textColor="#364041"
+                        android:textSize="@dimen/_10ssp" />
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_images"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.7"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <FrameLayout
+                    android:id="@+id/frame_add_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/bg_dashed_border_gray"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_baseline_add_24" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_name"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+        <EditText
+            android:id="@+id/ed_descp"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/description"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/sp_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:fontFamily="@font/almarai"
+            android:gravity="center_vertical"
+            android:hint="@string/categories"
+            android:padding="@dimen/_6sdp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_10ssp"
+            app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="10dp"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="#C0C0C0"
+            app:spinner_divider_color="#D8D6D6"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="#fff" />
+
+        <EditText
+            android:id="@+id/ed_amount"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/amount"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+        <EditText
+            android:id="@+id/ed_price"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_14sdp">
+
+            <TextView
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/additions"
+                android:textSize="@dimen/_11ssp" />
+
+            <CheckBox
+                android:id="@+id/cb_pizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contain_pizza_additions"
+                style="@style/textPatternRegular"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_10ssp"/>
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_additions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/tv_add_more_additions"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_add_circle"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="@string/other_additions"
+            android:textColor="@color/app" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_14sdp">
+
+            <TextView
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/additions_unique"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_additions_unique"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/tv_add_more_additions_unique"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_add_circle"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="@string/other_additions"
+            android:textColor="@color/app" />
+        <Button
+            android:id="@+id/btn_add"
+            style="@style/textPattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_button_main_shape"
+            android:text="@string/publish"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/card_delivery" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

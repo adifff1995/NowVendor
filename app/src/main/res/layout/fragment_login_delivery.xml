@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/_16sdp">
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_back_button"
+        android:src="@drawable/ic_baseline_chevron_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv"
+        style="@style/textPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:drawableEnd="@drawable/hi"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="@string/welcome"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_back" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/textPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:lineSpacingExtra="@dimen/_8sdp"
+        android:text="@string/login_txt1"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+
+        <EditText
+            android:id="@+id/ed_phone"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_11ssp"
+            />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/sp_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:fontFamily="@font/almarai"
+            android:gravity="start|center_vertical"
+            app:spinner_item_array="@array/phone_code"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_10ssp"
+            app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="10dp"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="#C0C0C0"
+            app:spinner_divider_color="#D8D6D6"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="#fff" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fram1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/frame">
+
+        <EditText
+            android:id="@+id/ed_password"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:id="@+id/show_pass1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:elevation="@dimen/_3sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_baseline_remove_red_eye_24" />
+    </FrameLayout>
+
+
+
+    <CheckBox
+        android:id="@+id/cb_remember"
+        style="@style/textPatternRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/remember"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fram1" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/almarai"
+        android:text="@string/forger_pass"
+        android:textColor="#AD282828"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/cb_remember"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:background="@drawable/bg_button_main_shape"
+        android:fontFamily="@font/almarai"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cb_remember" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login">
+
+        <TextView
+            android:id="@+id/tv_dont_have"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/almarai"
+            android:text="@string/dont_have_account"
+            android:textColor="#AD282828"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tv_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/almarai"
+            android:text="@string/create_account"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

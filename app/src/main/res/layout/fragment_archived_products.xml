@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/_50sdp"
+    tools:context=".Fragment.ProductsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_search"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:padding="@dimen/_7sdp"
+            android:singleLine="true"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textPatternRegular"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+           app:layout_constraintTop_toBottomOf="@id/ed_search"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/archived_products"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swip_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv">
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/rv_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_16sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="8"
+            app:shimmer_demo_layout_manager_type="linear_vertical"
+            app:shimmer_demo_view_holder_item_background="@color/white" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:paddingHorizontal="@dimen/_16sdp"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/bg_back_button"
+            android:src="@drawable/ic_icon_ionic_ios_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="@string/create_account"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_back" />
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/sign_up_txt1"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
+
+        <EditText
+            android:id="@+id/ed_name"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <FrameLayout
+            android:id="@+id/fram_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ed_name"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <EditText
+                android:id="@+id/ed_phone"
+                style="@style/textPatternRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_secondry_shape"
+                android:gravity="start"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_11ssp"
+                />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/sp_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_button_gray_meduim_raduis"
+                android:fontFamily="@font/almarai"
+                android:gravity="start|center_vertical"
+                app:spinner_item_array="@array/phone_code"
+                android:padding="@dimen/_7sdp"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_10ssp"
+                app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+                app:spinner_arrow_gravity="start"
+                app:spinner_arrow_padding="10dp"
+                app:spinner_arrow_show="true"
+                app:spinner_arrow_tint="#C0C0C0"
+                app:spinner_divider_color="#D8D6D6"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="#fff" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/ed_id_num"
+            style="@style/textPatternRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_secondry_shape"
+            android:gravity="start"
+            android:hint="@string/id_num"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/fram_mobile" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/sp_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:fontFamily="@font/almarai"
+            android:gravity="start|center_vertical"
+            android:hint="@string/city"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/ed_id_num"
+            app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="10dp"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="#C0C0C0"
+            app:spinner_divider_color="#D8D6D6"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="#fff" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/sp_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_button_gray_meduim_raduis"
+            android:fontFamily="@font/almarai"
+            android:gravity="start|center_vertical"
+            android:hint="@string/type_deliver"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/sp_city"
+            app:spinner_arrow_drawable="@drawable/ic_chevron_down"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="10dp"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="#C0C0C0"
+            app:spinner_divider_color="#D8D6D6"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="#fff" />
+        <FrameLayout
+            android:id="@+id/fram1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/sp_type">
+
+            <EditText
+                android:id="@+id/ed_password"
+                style="@style/textPatternRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_secondry_shape"
+                android:gravity="start"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/show_pass1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fram2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/fram1">
+
+            <EditText
+                android:id="@+id/ed_confirm_pass"
+                style="@style/textPatternRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_secondry_shape"
+                android:gravity="start"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/show_pass2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_baseline_remove_red_eye_24" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/fram2"
+            android:background="@drawable/bg_dashed_border_gray"
+            android:padding="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tv_uplaod"
+                style="@style/textPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_baseline_add_24"
+                android:gravity="center"
+                android:text="@string/add_person_logo"
+                android:textColor="#B4B4B4"
+                android:textSize="@dimen/_10ssp" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/cb_remember"
+            style="@style/textPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/agree_privacy"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frame_upload_image" />
+
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/bg_button_main_shape"
+            android:fontFamily="@font/almarai"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/cb_remember" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up">
+
+            <TextView
+                android:id="@+id/tv_have"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/almarai"
+                android:text="@string/have_account"
+                android:textColor="#AD282828"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/almarai"
+                android:text="@string/login"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
